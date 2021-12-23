@@ -1,5 +1,6 @@
 <?php
 
+// use App\Http\Contorllers\EditorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,11 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-    // return view('welcome');
-    return view('index');
+    return redirect()->route('Home');
 });
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('Home');
+
+Route::get('/{tag}/{article_id}', [App\Http\Controllers\HomeController::class, 'detail'])->name('Detail');
+
+Route::get('/editor', [App\Http\Controllers\EditorController::class, 'editor'])->name('Editor');

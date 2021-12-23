@@ -6128,7 +6128,7 @@ readers do not read off random characters that represent icons */
 body {
   font-size: 16px;
   background: #fdfdfd;
-  font-family: "Noto Sans TC", "Arial", sans-serif;
+  font-family: "Noto Sans TC", "Roboto", "Helvetica Neue", "Segoe UI", "Helvetica", "Avenir Next", "Arial", sans-serif;
 }
 
 .navbar {
