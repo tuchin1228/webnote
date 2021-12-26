@@ -2,6 +2,8 @@
 
 @section('head')
 <title>Ian工程師筆記</title>
+
+
 @endsection
 
 @section('bodyContent')
@@ -19,7 +21,7 @@
             <p class="text-base my-3 text-gray-600 font-light tracking-wider leading-relaxed text-justify	">
                 {!! strip_tags($article->content,'') !!}
             </p>
-            <h3 class="text-right text-gray-400">
+            <h3 class="text-right text-gray-400 font-light">
                 {{date('Y-m-d', strtotime($article->created_at))}}</h3>
         </article>
         @endforeach
@@ -80,8 +82,5 @@
 
 
 @section('script')
-<script>
 
-
-</script>
 @endsection

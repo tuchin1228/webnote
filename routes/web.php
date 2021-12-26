@@ -23,3 +23,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/{tag}/{article_id}', [App\Http\Controllers\HomeController::class, 'detail'])->name('Detail');
 
 Route::get('/editor', [App\Http\Controllers\EditorController::class, 'editor'])->name('Editor');
+
+Route::get('/{tag}/{article_id}/edit', [App\Http\Controllers\EditorController::class, 'edit'])->name('Edit');

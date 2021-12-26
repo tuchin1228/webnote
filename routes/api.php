@@ -19,4 +19,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/create', [App\Http\Controllers\EditorController::class, 'create'])->name('Create');
+
 Route::post('/uploadimage/{article_id}/{date}', [App\Http\Controllers\EditorController::class, 'uploadimage'])->name('Uploadimage');
+
+Route::post('/update', [App\Http\Controllers\EditorController::class, 'update'])->name('Update');
+
+Route::post('/delete', [App\Http\Controllers\EditorController::class, 'delete'])->name('Delete');

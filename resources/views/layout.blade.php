@@ -17,7 +17,7 @@
 
     <div class="navbar bg-white shadow-md">
         <div class="container items-center mx-auto flex  justify-between">
-            <h2 class="logo font-semibold cursor-pointer" onclick="location.href='/'"><span>Ian</span> 工程師筆記</h2>
+            <a class="logo font-semibold cursor-pointer" href="/"><span>Ian</span> 工程師筆記</a>
             <div class="links">
                 <a href="" class="px-5">Github</a>
                 <!-- <a href="" class="px-5">連結二</a>

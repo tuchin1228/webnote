@@ -33,6 +33,6 @@ class HomeController extends Controller
         if (count($articles) == 0) {
             return redirect()->route('Home');
         }
-        return view('detail', ['articles' => $articles]);
+        return view('detail', ['article' => $articles[0]]);
     }
 }

@@ -501,6 +501,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .-mt-px {
   margin-top: -1px;
 }
+.block {
+  display: block;
+}
 .flex {
   display: flex;
 }
@@ -726,6 +729,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .font-semibold {
   font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
 }
 .italic {
   font-style: italic;
