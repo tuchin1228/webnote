@@ -17,9 +17,23 @@
 
     <div class="navbar bg-white shadow-md">
         <div class="container items-center mx-auto flex  justify-between">
-            <a class="logo font-semibold cursor-pointer" href="/"><span>Ian</span> 工程師筆記</a>
-            <div class="links">
-                <a href="" class="px-5">Github</a>
+            <a class="logo font-semibold cursor-pointer" href="/"><span>Ian</span> 前後端筆記</a>
+            <div class="links flex items-center">
+                <a href="https://github.com/tuchin1228" class="px-5">Github</a>
+                @if (session()->get('token'))
+                <a href="{{route('Editor')}}" class="px-5"><span
+                        class="hover:border-b-2 hover:border-black transition-all duration-100">文章發佈</span></a>
+                <a href="{{route('ImageNone')}}" class="px-5"><span
+                        class="hover:border-b-2 hover:border-black transition-all duration-100">圖片管理</span></a>
+                <form action="{{route('Logout')}}" method="POST">
+                    @csrf
+                    <button type="submit" class="px-5"><span
+                            class="hover:border-b-2 hover:border-black transition-all duration-100">登出</span></button>
+                </form>
+                @else
+                <a href="{{route('Login')}}" class="px-5"><span
+                        class="hover:border-b-2 hover:border-black transition-all duration-100">登入</span></a>
+                @endif
                 <!-- <a href="" class="px-5">連結二</a>
         <a href="" class="px-5">連結三</a> -->
             </div>

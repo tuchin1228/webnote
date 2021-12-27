@@ -47,13 +47,15 @@
 
 
     </div>
-    <div class="relative mx-1 px-3 py-5 shadow-lg  shadow-gray-200 bg-white">
+    <div class="relative mx-1 px-3 py-5 shadow-lg  shadow-gray-200 bg-white" style="position: sticky;top:85px;">
         <header class="text-center">
             <img src="./img/head.png" style="width: 100%;max-width:250px;margin: 0 auto;" alt="">
             <div class="icons flex items-center justify-center mt-5">
-                <a href=""><i class="text-gray-300 mx-3 text-2xl fab fa-github-square"></i></a>
-                <a href=""><i class="text-gray-300 mx-3 text-2xl fab fa-youtube"></i></a>
-                <a href=""><i class="text-gray-300 mx-3 text-2xl fab fa-instagram"></i></a>
+                <a href="https://github.com/tuchin1228"><i
+                        class="text-gray-300 mx-3 text-2xl fab fa-github-square"></i></a>
+                <a href="https://www.youtube.com/channel/UCXZcob1UoBpmDHppqq3qL4Q"><i
+                        class="text-gray-300 mx-3 text-2xl fab fa-youtube"></i></a>
+                {{-- <a href=""><i class="text-gray-300 mx-3 text-2xl fab fa-instagram"></i></a> --}}
             </div>
         </header>
         <div class="search grid grid-cols-3 gap-1  border-t my-3 py-3">

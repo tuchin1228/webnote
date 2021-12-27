@@ -128,4 +128,42 @@ class HomeController extends Controller
         return view('index', ['articles' => $articles, 'tags' => $tags]);
 
     }
+
+    public function login()
+    {
+        return view('login');
+    }
+
+    public function login_check(Request $req)
+    {
+        $account = $req->account;
+        $password = $req->password;
+        $result = DB::table('auth')
+            ->where('account', '=', $account)
+            ->where('password', '=', $password)
+            ->get();
+        if (count($result) == 0) {
+            return redirect()->back();
+        } else {
+            $token = bin2hex(random_bytes(64));
+            // return $token;
+            DB::table('auth')
+                ->where('account', '=', $account)
+                ->update([
+                    'token' => $token,
+                ]);
+            $req->session()->put('account', $account);
+            $req->session()->put('token', $token);
+            return redirect()->route('Home');
+
+        }
+    }
+
+    public function logout(Request $req)
+    {
+        $req->session()->forget('account');
+        $req->session()->forget('token');
+        return redirect()->route('Home');
+
+    }
 }

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('head')
-<title>Ian工程師筆記</title>
+<title>{{$article->title}} - Ian前後端筆記</title>
 <style>
     #imgModal {
         display: none;
@@ -83,6 +83,7 @@
 @section('bodyContent')
 
 <div class="container max-w-5xl bg-white mx-auto shadow-md p-10 " style="min-height: 50vh">
+    @if (session()->get('token'))
     <div class="text-right">
         <button type="button"
             onclick="location.href='{{route('Edit',['tag'=>$article->tag,'article_id'=>$article->article_id])}}'"
@@ -90,6 +91,7 @@
         <button type="button" onclick="deleteArticle()"
             class="text-xl bg-red-500 hover:bg-red-400 text-white font-bold py-1 px-3 rounded">刪除</button>
     </div>
+    @endif
     {{-- @foreach ($articles as $article) --}}
     <a href="{{route('TagView',['tag'=>$article->tag_name])}}"
         class="px-2 text-sm rounded-sm  text-white bg-blue-500">{{$article->tag_name}}</a>
@@ -148,6 +150,8 @@
             type: 'POST',
             url: '{{route("Delete")}}',
             data: {
+                account: `{{session()->get('account')}}`,
+                token: `{{session()->get('token')}}`,
                 article_id: article_id
             },
             success: function (res) {

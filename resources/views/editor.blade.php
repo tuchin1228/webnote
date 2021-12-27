@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('head')
-<title>editor</title>
+<title>發布文章 - Ian前後端筆記</title>
 <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
 <style>
@@ -194,7 +194,9 @@
                 title: $('input[name="title"]').val(),
                 content: tinyMCE.get('mytextarea').getContent(),
                 tag: $('input[name="tag"]:checked').val(),
-                article_id: article_id
+                article_id: article_id,
+                account: `{{session()->get('account')}}`,
+                token: `{{session()->get('token')}}`,
             },
             success: function (res) {
                 console.log(res);
