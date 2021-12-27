@@ -11,10 +11,11 @@
 
 <div class="container mx-auto grid grid-cols-3 gap-2 items-start">
     <div class="col-span-2 mx-1 p-5 shadow-lg shadow-gray-200 bg-white">
+
         @foreach ($articles as $article)
         <article>
-
-            <a href="" class="px-2 text-sm rounded-sm  text-white bg-blue-500">{{$article->tag_name}}</a>
+            <a href="{{route('TagView',['tag'=>$article->tag_name])}}"
+                class="px-2 text-sm rounded-sm  text-white bg-blue-500">{{$article->tag_name}}</a>
             <h2 onclick="location.href='{{route('Detail',['tag'=>$article->tag_id,'article_id'=>$article->article_id])}}'"
                 class=" text-3xl hover:bg-gray-100 py-2 my-1 font-medium">
                 {{$article->title}}</h2>
@@ -56,14 +57,18 @@
             </div>
         </header>
         <div class="search grid grid-cols-3 gap-1  border-t my-3 py-3">
-            <input type="text" class="col-span-2 p-2 border rounded-md" placeholder="文章搜尋">
-            <button type="button"
+            <input type="text" class="col-span-2 p-2 border rounded-md" name="keyword" placeholder="文章搜尋">
+            <button type="button" onclick="SearchKeyword()"
                 class="p-1 bg-blue-500 hover:bg-blue-400 text-white rounded-md text-xl font-medium">搜尋</button>
         </div>
         <div class="tags flex flex-wrap">
+            @if (isset($tags))
             @foreach ($tags as $tag)
-            <a href="" class="m-1 py-1 px-3 rounded-md HOV bg-gray-100 hover:bg-gray-50">{{$tag->tag_name}}</a>
+            <a href="{{route('TagView',['tag'=>$tag->tag_name])}}"
+                class="m-1 py-1 px-3 rounded-md HOV bg-gray-100 hover:bg-gray-50">{{$tag->tag_name}}</a>
             @endforeach
+            @endif
+
             {{-- <a href="" class="m-1 py-1 px-3 rounded-md HOV bg-gray-100 hover:bg-gray-50">Vue</a>
             <a href="" class="m-1 py-1 px-3 rounded-md HOV bg-gray-100 hover:bg-gray-50">React</a>
             <a href="" class="m-1 py-1 px-3 rounded-md HOV bg-gray-100 hover:bg-gray-50">ReactNative</a>
@@ -82,5 +87,11 @@
 
 
 @section('script')
+<script>
+    function SearchKeyword() {
+        location.href = "/search/" + $('input[name="keyword"]').val()
+    }
+
+</script>
 
 @endsection

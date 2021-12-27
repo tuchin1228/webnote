@@ -91,7 +91,8 @@
             class="text-xl bg-red-500 hover:bg-red-400 text-white font-bold py-1 px-3 rounded">刪除</button>
     </div>
     {{-- @foreach ($articles as $article) --}}
-    <a href="" class="px-2 text-sm rounded-sm  text-white bg-blue-500">{{$article->tag_name}}</a>
+    <a href="{{route('TagView',['tag'=>$article->tag_name])}}"
+        class="px-2 text-sm rounded-sm  text-white bg-blue-500">{{$article->tag_name}}</a>
     <h2 class="mb-1 text-3xl font-medium">{{$article->title}}</h2>
     <p class="my-3 text-gray-400 font-light tracking-wider">{{date('Y-m-d H:i:s', strtotime($article->created_at))}}</p>
     <div class="content my-5" style="line-height: 2;
