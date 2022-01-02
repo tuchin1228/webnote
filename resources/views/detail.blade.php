@@ -2,6 +2,7 @@
 
 @section('head')
 <title>{{$article->title}} - Ian前後端筆記</title>
+<meta name="description" content="{{$article->title}}" />
 <style>
     #imgModal {
         display: none;
@@ -30,6 +31,23 @@
         -webkit-animation-duration: 0.6s;
         animation-name: zoom;
         animation-duration: 0.6s;
+    }
+
+    .content div {
+        white-space: normal !important;
+    }
+
+    .content div p span {
+        white-space: normal !important;
+    }
+
+    .inner a {
+        border-bottom: 1px solid transparent;
+        color: rgb(16, 80, 255);
+    }
+
+    .inner a:hover {
+        border-bottom: 1px solid rgb(16, 80, 255);
     }
 
     @-webkit-keyframes zoom {
@@ -82,7 +100,7 @@
 
 @section('bodyContent')
 
-<div class="container max-w-5xl bg-white mx-auto shadow-md p-10 " style="min-height: 50vh">
+<div class="container max-w-5xl bg-white mx-auto shadow-md p-5 md:p-10 " style="min-height: 50vh">
     @if (session()->get('token'))
     <div class="text-right">
         <button type="button"
@@ -95,12 +113,12 @@
     {{-- @foreach ($articles as $article) --}}
     <a href="{{route('TagView',['tag'=>$article->tag_name])}}"
         class="px-2 text-sm rounded-sm  text-white bg-blue-500">{{$article->tag_name}}</a>
-    <h2 class="mb-1 text-3xl font-medium">{{$article->title}}</h2>
+    <h2 class="mb-1 text-2xl md:text-3xl font-medium">{{$article->title}}</h2>
     <p class="my-3 text-gray-400 font-light tracking-wider">{{date('Y-m-d H:i:s', strtotime($article->created_at))}}</p>
-    <div class="content my-5" style="line-height: 2;
+    <div class="content inner my-5" style="line-height: 2;
     letter-spacing: 1.2px;
     font-weight: 300;
-    font-size: 1.3rem;">
+    font-size: 1.1rem;">
         {!!$article->content!!}
     </div>
     {{-- @endforeach --}}

@@ -37,14 +37,26 @@ Route::post('/logout', [App\Http\Controllers\HomeController::class, 'logout'])->
 //發文
 Route::get('/editor', [App\Http\Controllers\EditorController::class, 'editor'])->middleware(authcheck::class)->name('Editor');
 
+//訪客回報
+Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('Contact');
+
+//訪客回報
+Route::post('/contact', [App\Http\Controllers\HomeController::class, 'contact_post'])->name('ContactPost');
+
 //無用圖片管理
 Route::get('/imagenone', [App\Http\Controllers\HomeController::class, 'imagenone'])->middleware(authcheck::class)->name('ImageNone');
 
 //無用圖片管理
-Route::post('/deletenotuse', [App\Http\Controllers\HomeController::class, 'deletenotuse'])->name('DeleteNotuse');
+Route::post('/deletenotuse', [App\Http\Controllers\HomeController::class, 'deletenotuse'])->middleware(authcheck::class)->name('DeleteNotuse');
+
+//標籤管理
+Route::get('/tagmanage', [App\Http\Controllers\HomeController::class, 'tagmanage'])->middleware(authcheck::class)->name('TagManage');
+
+//標籤管理
+Route::post('/tagmanage', [App\Http\Controllers\HomeController::class, 'updatetag'])->middleware(authcheck::class)->name('UpdateTagManage');
 
 //分類文章列表
-Route::get('/{tag}', [App\Http\Controllers\HomeController::class, 'TagView'])->name('TagView');
+Route::get('/tag/{tag}', [App\Http\Controllers\HomeController::class, 'TagView'])->name('TagView');
 
 //內文
 Route::get('/{tag}/{article_id}', [App\Http\Controllers\HomeController::class, 'detail'])->name('Detail');

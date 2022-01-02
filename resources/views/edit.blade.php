@@ -90,8 +90,8 @@
         </label>
         @endforeach
     </div>
-    article_id:{{$article->article_id}}
-    article_id:{{$article->tag}}
+    {{-- article_id:{{$article->article_id}}
+    article_id:{{$article->tag}} --}}
     <input type="text" name="title" class="border rounded py-1 px-2 text-xl bg-white w-full my-2"
         value="{{$article->title}}" placeholder="標題">
     <textarea id="mytextarea" name="content">{{$article->content}}</textarea>

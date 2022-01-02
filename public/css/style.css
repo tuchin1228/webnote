@@ -6141,7 +6141,7 @@ body {
 }
 .navbar .logo {
   transition: 0.2s;
-  font-size: 2rem;
+  line-height: 80px;
   position: relative;
   font-style: italic;
 }
@@ -6160,11 +6160,6 @@ body {
   height: 6px;
   background-color: #ffe675;
 }
-.navbar .links a {
-  transition: 0.2s;
-  line-height: 80px;
-}
-
 .content article {
   margin: 20px 0;
   padding: 15px 0;
@@ -6177,4 +6172,65 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.nav__trigger {
+  display: block;
+  width: 30px;
+  height: 30px;
+  z-index: 200;
+}
+
+.nav__icon {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 5px;
+  background-color: black;
+  transition-property: background-color, transform;
+  transition-duration: 300ms;
+}
+.nav__icon:before, .nav__icon:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 5px;
+  position: absolute;
+  background: black;
+  transition-property: margin, transform;
+  transition-duration: 300ms;
+}
+.nav__icon:before {
+  margin-top: -10px;
+}
+.nav__icon:after {
+  margin-top: 10px;
+}
+
+.style-1 .nav {
+  transform: translateX(-100%);
+  width: 100%;
+  height: 100%;
+}
+.style-1 .nav__link {
+  opacity: 0;
+  transition-delay: 500ms;
+}
+.style-1 .nav--active .nav__link {
+  opacity: 1;
+}
+.style-1 .nav--active .nav {
+  transition: all 300ms ease;
+  transform: translateX(0);
+}
+.style-1 .nav--active .nav__icon {
+  background: rgba(0, 0, 0, 0);
+}
+.style-1 .nav--active .nav__icon:before {
+  margin-top: 0;
+  transform: rotate(45deg);
+}
+.style-1 .nav--active .nav__icon:after {
+  margin-top: 0;
+  transform: rotate(-45deg);
 }

@@ -166,4 +166,57 @@ class HomeController extends Controller
         return redirect()->route('Home');
 
     }
+
+    public function tagmanage()
+    {
+        $tags = DB::table('tags')->get();
+        return view('tags', ['tags' => $tags]);
+    }
+
+    public function updatetag(Request $req)
+    {
+        $array = $req->tagNew;
+        $temp = [];
+        foreach ($array as $key => $item) {
+            if (!empty($item[0])) {
+                DB::table('tags')
+                    ->where('id', '=', $key)
+                    ->update([
+                        'tag_name' => $item[0],
+                    ]);
+            }
+
+        }
+
+        return redirect()->route('TagManage');
+
+        // return $temp;
+
+        // $arr = array_merge($req->tagId, $req->tagNew);
+        // return $arr;
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    public function contact_post(Request $req)
+    {
+        $content = $req->validate([
+            "name" => "required",
+            'content' => "required",
+        ], [
+            'name.required' => '暱稱為必填',
+            'content.required' => '內容為必填',
+        ]);
+
+        DB::table('contact')->insert([
+            'name' => $req->name,
+            'content' => $req->content,
+        ]);
+
+        return redirect()->route('Home');
+
+    }
 }
