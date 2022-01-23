@@ -32,8 +32,8 @@
     <div class=" lg:px-0 navbar bg-white shadow-md ">
         <div class="style-1 container flex-wrap lg:flex-nowrap items-center mx-auto flex  justify-between">
             <div class=" px-5 w-full bg-white flex justify-between items-center z-20">
-                <a class="logo text-3xl md:text-4xl font-semibold cursor-pointer" href="/"><span>Ian</span>
-                    前後端筆記</a>
+                <a class="logo text-2xl md:text-3xl font-semibold cursor-pointer" href="/"><span>Ian's</span>
+                    Web全端筆記</a>
                 <div class="lg:hidden ">
                     <a href="#" class="nav__trigger "><span class="nav__icon"></span></a>
                     {{-- <i class="fas fa-bars"></i> --}}

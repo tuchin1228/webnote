@@ -26,3 +26,7 @@ Route::post('/uploadimage/{article_id}/{date}', [App\Http\Controllers\EditorCont
 Route::post('/update', [App\Http\Controllers\EditorController::class, 'update'])->middleware(apiauthcheck::class)->name('Update');
 
 Route::post('/delete', [App\Http\Controllers\EditorController::class, 'delete'])->middleware(apiauthcheck::class)->name('Delete');
+
+Route::get('/getdata', function () {
+    return 'success';
+});

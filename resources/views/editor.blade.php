@@ -82,7 +82,7 @@
 
 <form class="w-3/5 mx-auto">
     @csrf
-    <div class="flex my-3">
+    <div class="flex flex-wrap my-3">
         @foreach ($tags as $key => $tag)
         <label>{{$tag->tag_name}}
             <input type="radio" name="tag" {{$key==0 ? 'checked' : ''}} value="{{$tag->id}}">
