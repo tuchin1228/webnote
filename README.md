@@ -4,21 +4,21 @@
 
 ### Link
 
-<a href="<<https://tuchin1228.github.io/Sofa-Market/#/>>" target="_blank">https://tuchin1228.github.io/Sofa-Market/#/</a><br/>
+<a href="<https://webnote.3b8.info/home>" target="_blank">https://webnote.3b8.info/home</a><br/>
 
 ### 網站介紹
 
-- 管理員登入
-- 文章標籤管理
-- 圖片管理
-- 文章發布
-- 訪客留言
+-   管理員登入
+-   文章標籤管理
+-   圖片管理
+-   文章發布
+-   訪客留言
 
 ### 網站框架
 
-- Laravel
+-   Laravel
 
 ### 使用套件
 
-- Tailwindcss
-- Axios
+-   Tailwindcss
+-   Axios

@@ -50,7 +50,7 @@
     <div class="col-span-3 lg:col-span-1 relative mx-1 px-3 py-5 shadow-lg  shadow-gray-200 bg-white"
         style="position: sticky;top:85px;">
         <header class="text-center">
-            <img src="./img/head.png" style="width: 100%;max-width:250px;margin: 0 auto;" alt="">
+            <img src="/img/head.png" style="width: 100%;max-width:250px;margin: 0 auto;" alt="">
             <div class="icons flex items-center justify-center mt-5">
                 <a href="https://github.com/tuchin1228"><i
                         class="text-gray-300 hover:text-gray-900 mx-3 text-2xl fab fa-github-square"></i></a>
