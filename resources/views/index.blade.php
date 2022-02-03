@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('head')
-<title>Ian工程師筆記</title>
+<title>Ian's Web工程師筆記</title>
 
 
 @endsection

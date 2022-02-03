@@ -12,6 +12,7 @@
     {{-- <link href="{{ asset('/css/output.min.css') }}" rel="stylesheet"> --}}
     {{-- <link href="{{ asset('/css/all.min.css') }}" rel="stylesheet"> --}}
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <meta name="google-site-verification" content="SKKLx68V64e9oHdvZPz95x2-J4kbiecfltFxrxPOyUE" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8J3CJSD3M"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
