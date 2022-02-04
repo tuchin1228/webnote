@@ -19,6 +19,11 @@ Route::get('/', function () {
     return redirect()->route('Home');
 });
 
+Route::get('/sitemap.xml', function () {
+    return response()
+        ->view('sitemap')
+        ->header('Content-Type', 'text/xml');
+});
 //首頁
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('Home');
 
