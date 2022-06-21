@@ -4,7 +4,7 @@
 
 ### Link
 
-<a href="<https://webnote.3b8.info/home>" target="_blank">https://webnote.3b8.info/home</a><br/>
+<a href="<https://webnote.3b8.site/home>" target="_blank">https://webnote.3b8.site/home</a><br/>
 
 ### 網站介紹
 
