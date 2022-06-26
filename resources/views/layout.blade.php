@@ -12,18 +12,14 @@
     {{-- <link href="{{ asset('/css/output.min.css') }}" rel="stylesheet"> --}}
     {{-- <link href="{{ asset('/css/all.min.css') }}" rel="stylesheet"> --}}
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <meta name="google-site-verification" content="SKKLx68V64e9oHdvZPz95x2-J4kbiecfltFxrxPOyUE" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8J3CJSD3M"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HVEDG9G2V"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-Z8J3CJSD3M');
-
+    gtag('config', 'G-9HVEDG9G2V');
     </script>
     @yield('head')
 </head>
