@@ -55,7 +55,7 @@ class EditorController extends Controller
                 'date' => $date,
             ]);
 
-            // return ['location' => "http://webnote.3b8.info/storage/uploads/$filename"];
+            // return ['location' => "http://webnote.3b8.site/storage/uploads/$filename"];
             return ['location' => request()->getSchemeAndHttpHost() . "/storage/uploads/$filename"];
 
         }

@@ -6,72 +6,72 @@
 
 
     <url>
-        <loc>https://webnote.3b8.info/home</loc>
+        <loc>https://webnote.3b8.site/home</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>1.00</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/contact</loc>
+        <loc>https://webnote.3b8.site/contact</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/login</loc>
+        <loc>https://webnote.3b8.site/login</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/tag/Web</loc>
+        <loc>https://webnote.3b8.site/tag/Web</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/tag/Linux</loc>
+        <loc>https://webnote.3b8.site/tag/Linux</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/tag/%E8%B3%87%E6%96%99%E5%BA%AB</loc>
+        <loc>https://webnote.3b8.site/tag/%E8%B3%87%E6%96%99%E5%BA%AB</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/tag/Cordova</loc>
+        <loc>https://webnote.3b8.site/tag/Cordova</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/tag/API%E4%B8%B2%E6%8E%A5</loc>
+        <loc>https://webnote.3b8.site/tag/API%E4%B8%B2%E6%8E%A5</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/home?page=2</loc>
+        <loc>https://webnote.3b8.site/home?page=2</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/tag/React</loc>
+        <loc>https://webnote.3b8.site/tag/React</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/tag/ReactNative</loc>
+        <loc>https://webnote.3b8.site/tag/ReactNative</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/tag/Vue</loc>
+        <loc>https://webnote.3b8.site/tag/Vue</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/tag/%E6%9C%AA%E5%88%86%E9%A1%9E</loc>
+        <loc>https://webnote.3b8.site/tag/%E6%9C%AA%E5%88%86%E9%A1%9E</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.80</priority>
     </url>
     <url>
-        <loc>https://webnote.3b8.info/home?page=1</loc>
+        <loc>https://webnote.3b8.site/home?page=1</loc>
         <lastmod>2022-02-04T03:46:32+00:00</lastmod>
         <priority>0.64</priority>
     </url>
